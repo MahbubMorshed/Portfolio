@@ -43,21 +43,22 @@
                     t qui recusandae labore perspiciatis unde magni voluptatem.</p>
         </div>
     </section>
+    <!-- Skill -->
     <section class="section-1">
         <div class="skills-container">
             <h3>Skills</h3>
             {% for skill in detailedSkills %}
             <div class="skill-wrapper">
-                <h5>{{skill.title}}</h5>
-                <p>{{skill.body}}</p>
+                {% if skill.logo %}
+                    <img src="{{skill.logo.url}}" class="skill-logo"/>
+                {% endif %}
+                <div>
+                    <h5>{{skill.title}}</h5>
+                    <p>{{skill.body}}</p>
+                </div>
+                
             </div>
-            {% endfor %}
-            <div class="skill-wrapper">
-                <h5>Django</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quos possimus expedita consequuntur. Delectus possimus a iste maiores sed nostrum nulla?</p>
-            </div>
-            
+            {% endfor %}   
             <h3>Other skills</h3>
             <div class="other-skill-wrapper">
                 {% for skill in skills %}

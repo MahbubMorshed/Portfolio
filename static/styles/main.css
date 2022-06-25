@@ -128,14 +128,22 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0 auto;
 }
 .skill-wrapper {
+    display: flex;
+    gap: 2em;
+    align-items: center;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+.skill-logo {
+    width: 60px;
+    object-fit: contain;
 }
 .other-skill-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
 }
+
 .skill-tag {
     background-color: #c4e7f2;
     width: fit-content;
@@ -173,6 +181,10 @@ h1,h2,h3,h4,h5,h6 {
     .skills-container {
         width: 100%;
     } 
+    .skill-wrapper {
+        flex-flow: column;
+    }
+ 
     .other-skill-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
