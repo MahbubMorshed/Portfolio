@@ -5,6 +5,7 @@
     {% if request.user.is_authenticated  %}
     <a class="nav-link" href="{% url 'inbox' %}">Inbox</a>
     <a class="nav-link" href="{% url 'add-project' %}">Add Projects</a>
+    <a class="nav-link" href="{% url 'add-skill' %}">Add Skill</a>
     {% endif %}
 </section>
 
