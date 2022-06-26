@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
     
-    <section class="hero">
+    <section class="section-1">
         <div class="hero-content">
             <div class="hero-content-intro">
                 <img id="profile-pic" src="{% static 'images/me2in.png' %}" /> 
@@ -11,40 +11,50 @@
             <div class="hero-content-subheadline">
                 <h3 class="description">Fullstack Developer</h3>
                 <p class="slogan">Make cool things</p>
+                <a href="{% static 'images/resume.pdf' %}" class="btn btn-light"  download>Download Resume</a> 
             </div>
         </div>
+        
+    </section>
+    <section class="section-2">
+        <div class="container">
+            <h3>My Project</h3>
+            <h5>projects that make my journey worthwhile</h5>
+            <div class="container-card">
+                {% for project in projects %}
+                <div class="card1">
+                    <div class="box">
+                        <div class="content">
+                            <img class="card-thumb" src="{{project.thumbnail.url}}">
+                            <h3 class="card-title">{{project.title}}</h3>
+                            <a href="{% url 'project' project.id %}">read more</a>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <h3>There are no projects in database</h3>
+                {% endfor %}
+            </div>
+        </div>
+        
     </section>
 
-    <section class="conatiner section-2">
-        <h3>My Project</h3>
-        <h5>projects that make my journey worthwhile</h5>
-        <div class="project-wrapper">
-            {% for project in projects %}
-            <div class="project-column">
-                <a href="{% url 'project' project.id %}">
-                    <img class="project-thumb" src="{{project.thumbnail.url}}">
-                </a>
-                <div class="project-body">
-                    <h4>{{project.title}}</h4>
-                </div>
-            </div>
-            {% empty %}
-            <h3>There are no projects in database</h3>
-           {% endfor %}
-        </div>
-        <div class="about-wrapper">
-            <h3>more about me</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque doloribus deleniti, 
+    <section class="section-1">
+        <div class="container">
+            <div class="about-wrapper">
+                <h3>more about me</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque doloribus deleniti, 
                 velit ea explicabo quis autem, corrupti officia soluta dolores libero laborum. Animi 
                 eligendi quo optio ut? Ratione quia fuga dolores possimus dolore beatae assumenda in 
                 nostrum, consequatur, obcaecati quam omnis impedit, culpa corporis odio suscipit eveniet 
                 vitae quas itaque!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quidem aliquid veritatis 
                     t qui recusandae labore perspiciatis unde magni voluptatem.</p>
-        </div>
+            </div>
+        </div>  
     </section>
     <!-- Skill -->
-    <section class="section-1">
+    <section class="section-2">
         <div class="skills-container">
             <h3>Skills</h3>
             {% for skill in detailedSkills %}
