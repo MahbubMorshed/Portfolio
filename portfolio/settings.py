@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
     'base.apps.BaseConfig',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'fontawesomefree'
 ]
 
 MIDDLEWARE = [

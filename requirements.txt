@@ -7,3 +7,4 @@ Pillow==9.1.1
 sqlparse==0.4.2
 tzdata==2022.1
 whitenoise==6.2.0
+fontawesomefree==6.1.1

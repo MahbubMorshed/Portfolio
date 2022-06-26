@@ -2,20 +2,36 @@
 {% load static %}
 {% block content %}
     
+    
     <section class="section-1">
-        <div class="hero-content">
-            <div class="hero-content-intro">
-                <img id="profile-pic" src="{% static 'images/me2in.png' %}" /> 
-                <h1 class="intro-name">Mahbub<br>Morshed</h1>
+        <div class="blog-post">
+            <div class="blog-post_image">
+                <img src="{% static 'images/me300.jpg' %}" alt="me">
             </div>
-            <div class="hero-content-subheadline">
-                <h3 class="description">Fullstack Developer</h3>
-                <p class="slogan">Make cool things</p>
-                <a href="{% static 'images/resume.pdf' %}" class="btn btn-light"  download>Download Resume</a> 
+            <div class="blog-post_info">
+                <div class="blog-post_date">
+                    <h1 class="blog-post_title">Mahbub Morshed</h1>
+                    <h4>Fullstack Developer and 3D Artist</h4>
+                </div>  
+                <div>
+                    <p class="blog-post_text">I'm Mahbub belong to (Dhaka) Bangladesh I am personally so motivated regarding my work,
+                        and I always try my best to achieve goals and objectives.<br>
+                        My field is Fullstack web application, 3d Model, and Game Asset creation</p>
+                </div>
+                
+                <a href="{% static 'images/resume.pdf' %}" class="blog-post_CTA" download>Resume</a>
+                <div class="icons">
+                    <a class="icon" href="https://www.linkedin.com/in/mahbub-morshed/"><i class="fa-brands fa-linkedin"></i></a> 
+                    <a class="icon" href="https://www.artstation.com/mahbub"><i class="fa-brands fa-artstation"></i></a> 
+                    <a class="icon" href="https://github.com/MahbubMorshed"><i class="fa-brands fa-github"></i></a> 
+                </div>
+                
+                
             </div>
+            
         </div>
-        
-    </section>
+
+    </section> 
     <section class="section-2">
         <div class="container">
             <h3>My Project</h3>
@@ -38,23 +54,8 @@
         </div>
         
     </section>
-
-    <section class="section-1">
-        <div class="container">
-            <div class="about-wrapper">
-                <h3>more about me</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque doloribus deleniti, 
-                velit ea explicabo quis autem, corrupti officia soluta dolores libero laborum. Animi 
-                eligendi quo optio ut? Ratione quia fuga dolores possimus dolore beatae assumenda in 
-                nostrum, consequatur, obcaecati quam omnis impedit, culpa corporis odio suscipit eveniet 
-                vitae quas itaque!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quidem aliquid veritatis 
-                    t qui recusandae labore perspiciatis unde magni voluptatem.</p>
-            </div>
-        </div>  
-    </section>
     <!-- Skill -->
-    <section class="section-2">
+    <section class="section-1">
         <div class="skills-container">
             <h3>Skills</h3>
             {% for skill in detailedSkills %}
