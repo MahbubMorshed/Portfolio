@@ -6,7 +6,9 @@
     <div class="project-container">
         <img class="project-image" src="{{project.thumbnail.url}}"/>
         <h1>{{project.title}}</h1>
+        {% if request.user.is_authenticated  %}
         <a class="btn btn-primary" href="{% url 'edit-project' project.id %}">Edit</a>
+        {% endif %}
         <hr/>
         <p>{{ project.body|safe }}</p>
 
