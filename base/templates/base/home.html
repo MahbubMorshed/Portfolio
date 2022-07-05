@@ -84,20 +84,21 @@
     <!-- Endoresement -->
     <section class="section-2">
         <div class="skills-container">
-            <h3>Endorsement</h3>
+            <h3 class="endorse">Give me your valuable Endorsement</h3>
             <a class="btn btn-dark my-2" href="{% url 'add-endorsement' %}">Add Endorsement</a>
 
             {% for i in endorsements %}
             <div style="margin-bottom: 1em" class="card">
-                <div class="card-body">
-                    <h5>{{i.name}}</h5>
+                <div class="card-body"> 
                     <p>{{i.body}}</p>
+                    <h5>{{i.name}}</h5>
                 </div>
                 
             </div>
             {% endfor %}
         </div>
     </section>
+    <!-- Contact form -->
     <section class="section-1">
         <div class="container">
             <form class="contact-form" method="POST">
